@@ -1,0 +1,46 @@
+.mobileNavbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--primary-container);
+    box-shadow: var(--shadow-1);
+    z-index: 10;
+
+    @media screen and (min-width: 800px) {
+        display: none;
+        visibility: hidden;
+    }
+
+    &__ul {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 25px;
+
+        &-link {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 13px;
+            grid-gap: 3px;
+            color: var(--on-background);
+            
+            i {
+                padding: 5px 20px;
+                font-size: 20px;
+                border-radius: var(--radius-pill);
+                position: relative;
+                transition: background-color 0.3s;
+            }
+
+            &.active i {
+                background-color: var(--active-indicator);
+            }
+
+            &:hover > i,
+            &:focus-visible > i {
+                background-color: var(--alpha-10);
+            }
+        }
+    }
+}

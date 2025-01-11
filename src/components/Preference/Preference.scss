@@ -1,0 +1,39 @@
+.preference {
+    padding: 50px 0;
+    text-align: center;
+
+    &-title {
+        font-family: var(--serif);
+        font-weight: 500;
+        font-size: 27px;
+
+        @media screen and (min-width: 768px) {
+            font-size: 35px;
+        }
+
+        @media screen and (min-width: 1024px) {
+            font-size: 40px;
+        }
+    }
+
+    &-text {
+        line-height: 1.4;
+        max-width: 430px;
+        margin: 5px auto 0;
+
+        @media screen and (min-width: 768px) {
+            font-size: 17px;
+        }
+    }
+
+    &__links {
+        display: flex;
+        flex-wrap: wrap;
+        grid-gap: 10px;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+        max-width: 1200px;
+        margin-inline: auto;
+    }
+}

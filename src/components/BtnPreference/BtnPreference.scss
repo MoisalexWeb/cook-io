@@ -1,0 +1,16 @@
+.preference-btn {
+    display: inline-block;
+    color: var(--on-badge-btn);
+    background-color: var(--badge-btn);
+    padding: 10px 20px;
+    border-radius: 40px;
+    border: 2px solid transparent;
+    transition: all 0.3s;
+
+    &:hover,
+    &:focus {
+        border-color: var(--alpha-10);
+        box-shadow: var(--shadow-1);
+        outline: none;
+    }
+}

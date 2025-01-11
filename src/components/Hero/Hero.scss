@@ -1,0 +1,55 @@
+.hero {
+    padding: 0 20px;
+    background-image: url(/public/images/hero-banner-small.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: var(--radius-8);
+    height: 450px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    grid-gap: 10px;
+    align-items: center;
+    justify-content: center;
+
+    @media screen and (min-width: 650px) {
+        background-image: url(/public/images/hero-banner-medium.jpg);
+    }
+
+    @media screen and (min-width: 768px) {
+        height: 500px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        background-image: url(/public/images/hero-banner-large.jpg);
+    }
+
+    &-title {
+        text-align: center;
+        font-family: var(--serif);
+        font-size: 35px;
+        font-weight: 400;
+
+        @media screen and (min-width: 768px) {
+            font-size: 45px;
+        }
+
+        @media screen and (min-width: 1200px) {
+            font-size: 60px;
+        }
+    }
+
+    &-text {
+        font-size: 15px;
+        font-weight: 500;
+        text-align: center;
+
+        @media screen and (min-width: 768px) {
+            font-size: 16px;
+        }
+
+        @media screen and (min-width: 1200px) {
+            font-size: 17px;
+        }
+    }
+}

@@ -1,6 +1,11 @@
 import { getMealById } from "../../../../utils/getData.ts"
 import { useState } from "react"
 
+interface IngredientType {
+    ingredient: string
+    measure: string
+}
+
 interface Meal {
     idMeal: string
     strMeal: string
@@ -10,7 +15,7 @@ interface Meal {
     strSource: string | null
     strYoutube: string | null
     strInstructions: string | null
-    ingredients: string[]
+    ingredients: IngredientType[]
     totalIngredients: number
 }
 
@@ -25,8 +30,9 @@ export const useGetMeal = () => {
                 else {
                     // Filtrar y contar las propiedades de strIngredient que no están vacías 
                     const ingredients = Object.keys(data).filter(key => key.startsWith('strIngredient') && data[key])
-                        .map(key => ({
-                            ingredient: data[key], measure: data[`strMeasure${key.match(/\d+/)[0]}`]
+                        .map((key, index) => ({
+                            ingredient: data[key],
+                            measure: data[`strMeasure${index + 1}`] || ''
                         }))
                         .filter(item => item.ingredient && item.measure.trim());
 

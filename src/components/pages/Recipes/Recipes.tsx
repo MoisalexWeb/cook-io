@@ -22,12 +22,10 @@ export const Recipes = () => {
 
         if (areaName) {
             handleArea(areaName)
-            console.log(areaName)
         }
 
         if (categoryName) {
             handleCategory(categoryName)
-            console.log(categoryName)
         }
         
     }, [areaName, categoryName])

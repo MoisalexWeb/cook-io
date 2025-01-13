@@ -13,12 +13,11 @@ export const Detail = () => {
 
 
     useEffect(() => {
-        getMeal(recipeId)
+        if (recipeId) {
+            getMeal(recipeId)
+        }
     }, [recipeId])
-
-    useEffect(() => {
-        console.log(meal)
-    }, [meal])
+    
 
     return (
         <section className="detail container">

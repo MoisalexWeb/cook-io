@@ -1,12 +1,18 @@
 import { createContext } from "react";
 import { useState } from "react";
 
+type Meal = {
+    idMeal: string
+    strMeal: string
+    strMealThumb: string
+}
+
 interface FilterContextProps { 
     isOpen: boolean,
     setIsOpen: React.Dispatch<React.SetStateAction<boolean>>,
     isLoading: boolean,
     setIsLoading: React.Dispatch<React.SetStateAction<boolean>>,
-    meals: Array,
+    meals: Meal[],
     setMeals: React.Dispatch<React.SetStateAction<[]>>
 }
 
@@ -14,7 +20,7 @@ export const FilterContext = createContext<FilterContextProps | undefined>(undef
 
 
 interface FilterProviderProps { 
-    children: ReactNode
+    children: any
 }
 
 export const FilterProvider = ({ children }: FilterProviderProps) => {

@@ -2,6 +2,16 @@ import "./RecipeDetailCard.scss"
 import { useSaveRecipe } from "../../hooks/useSaveRecipe.ts"
 import { Link } from "react-router-dom"
 
+interface IngredientType {
+    ingredient: string
+    measure: string
+}
+
+interface Ingredient {
+    ingredient: string
+    measure: string
+}
+
 interface Props {
     id: string
     name: string
@@ -11,18 +21,14 @@ interface Props {
     article: string | null
     youtube: string | null
     instructions: string | null
-    ingredients: []
+    ingredients: IngredientType[]
     totalIngredients: number
 }
 
-interface Ingredient {
-    ingredient: string
-    measure: string
-}
+
 
 export const RecipeDetailCard: React.FC<Props> = ({ id, name, image, area, category, ingredients, instructions, totalIngredients, article, youtube }) => {
     const { isSaved, saveRecipe } = useSaveRecipe(id)
-
 
     return (
         <article className="detailCard">
@@ -34,15 +40,15 @@ export const RecipeDetailCard: React.FC<Props> = ({ id, name, image, area, categ
                 <div className="detailCard__header">
                     <h2 className="detailCard__header-title">{name}</h2>
 
-                    <button 
+                    <button
                         className="detailCard__header-btn"
                         onClick={saveRecipe}
                     >
                         {
-                            isSaved 
+                            isSaved
                                 ? <>Unsave <i className="bx bxs-bookmark-star"></i></>
                                 : <>Save <i className="bx bx-bookmark"></i></>
-                        }                        
+                        }
                     </button>
                 </div>
 
@@ -88,3 +94,11 @@ export const RecipeDetailCard: React.FC<Props> = ({ id, name, image, area, categ
         </article>
     )
 }
+
+// [
+//     { ingredient: 'Bulgur Wheat', measure: '25g' },
+//     { ingredient: 'Lamb Mince', measure: '500g' },
+//     { ingredient: 'Cumin', measure: '1 tsp ' },
+//     { ingredient: 'Coriander', measure: '1 tsp ' },
+//     { ingredient: 'Paprika', measure: '1 tsp ' }
+// ]

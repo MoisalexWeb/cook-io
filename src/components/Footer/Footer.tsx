@@ -1,7 +1,7 @@
 import "./Footer.scss"
-import apiLogo from "/public/images/API-logo.png"
-import logoLight from "/public/images/logo-light.svg"
-import logoDark from "/public/images/logo-dark.svg"
+import apiLogo from "/images/API-logo.png"
+import logoLight from "/images/logo-light.svg"
+import logoDark from "/images/logo-dark.svg"
 
 export const Footer = () => {
     return (

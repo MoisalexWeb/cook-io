@@ -1,6 +1,6 @@
 .hero {
     padding: 0 20px;
-    background-image: url(/public/images/hero-banner-small.jpg);
+    background-image: url(/images/hero-banner-small.jpg);
     background-position: center;
     background-size: cover;
     border-radius: var(--radius-8);
@@ -13,7 +13,7 @@
     justify-content: center;
 
     @media screen and (min-width: 650px) {
-        background-image: url(/public/images/hero-banner-medium.jpg);
+        background-image: url(/images/hero-banner-medium.jpg);
     }
 
     @media screen and (min-width: 768px) {
@@ -21,7 +21,7 @@
     }
 
     @media screen and (min-width: 1200px) {
-        background-image: url(/public/images/hero-banner-large.jpg);
+        background-image: url(/images/hero-banner-large.jpg);
     }
 
     &-title {

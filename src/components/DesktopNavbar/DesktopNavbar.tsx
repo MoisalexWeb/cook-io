@@ -1,7 +1,7 @@
 import "./DesktopNavbar.scss"
 import { NavLink } from "react-router-dom"
-import logoLight from "/public/images/logo-light.svg"
-import logoDark from "/public/images/logo-dark.svg"
+import logoLight from "/images/logo-light.svg"
+import logoDark from "/images/logo-dark.svg"
 import { useSetTheme } from "./hooks/useSetTheme.ts" 
 
 

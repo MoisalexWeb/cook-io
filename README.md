@@ -23,8 +23,7 @@ Hi 👋 Cookio is a culinary recipe Single Page Application (SPA) developed with
 ## Deployment
 
 Deploy on Netlify
-
-[Cookio](https://cookio-spa.netlify.app/)
+**<a href="https://cookio-spa.netlify.app/" traget="_blank">Cookio</a>**
 
 
 ## Run Locally
